@@ -4,16 +4,16 @@
  * Module dependencies.
  */
 
-var app = require('../app');
-var debug = require('debug')('myapp:server');
-var http = require('http');
+var app = require('../app'); //获取到app.js的文件的 值 app
+var debug = require('debug')('myapp:server'); //获取debug
+var http = require('http'); //获取到http模块
 
 /**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '8888');
-app.set('port', port);
+app.set('port', port);  //设置端口
 
 /**
  * Create HTTP server.
@@ -25,7 +25,10 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port);
+server.listen(port,function () {
+  console.log('http://localhost:'+port);
+});  //启动
+// server.timeout =  6000;
 server.on('error', onError);
 server.on('listening', onListening);
 

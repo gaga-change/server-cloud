@@ -55,27 +55,31 @@ app.use(function(req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
-  //如果程序崩溃了，临死前报下错  500 
+//开发错误处理程序
+if (app.get('env') === 'development') {  //得到内置的 env  变量
+  console.log('--development');
+  //如果程序的状态是是发展,就是所之前没有程序没错误,就继续走着,默认会执行下面的代码
   app.use(function(err, req, res, next) {
+    console.log('development error handler');
     res.status(err.status || 500);
-    res.render('error', {   //返回一个错误html
-      message: err.message,  
+    //返回一个错误html
+    res.render('error.html', {
+      message: err.message,
       error: err
     });
   });
 }
-
 // production error handler
 // no stacktraces leaked to user
+// 生产错误处理程序
 app.use(function(err, req, res, next) {
   //普通的err ， 返回 错误HTML；
   res.status(err.status || 500);
+  console.log('production error handler')
   res.render('error', {
     message: err.message,
     error: {}
   });
 });
-
 
 module.exports = app;
