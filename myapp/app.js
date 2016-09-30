@@ -17,6 +17,7 @@ process.env.PORT=8888;//设置端口号
 var app = express(); //获取Application对象
 app.set('config',config); //把配置信息设置为全局
 
+console.log(app.get('config').mongo.url);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));  //设置views的路径
 app.engine('.html',ejs.renderFile); // 配置模板
