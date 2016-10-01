@@ -7,7 +7,10 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/test', function (req, res, next) {
-    res.send('gaga');
+    res.send('gaga.post');
+});
+router.get('/test', function (req, res, next) {
+    res.send('gaga.get');
 });
 
 module.exports = router;

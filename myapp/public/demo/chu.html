@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配置信息</title>
+</head>
+<body ng-app="myApp">
+<!--
+    1.选择文件
+    2.选择哪个表
+    3.选择哪个为主键
+    4.配置 {key,别名,是否修改，提示，值}
+    5.确定
+        1.判断文件格式
+        2.获取json数据，载入到数据库 chu表中
+        3.配置信息也放到数据库 config表中
+-->
+<div class="container" ng-controller="firstController">
+    <div class="alert alert-warning alert-dismissible  " style="display: none" role="alert">
+        <button type="button" class="close" data-dismiss="myAlert"><span aria-hidden="true">&times;</span><span
+                class="sr-only">Close</span></button>
+        <strong>警告!</strong> {{info.warning}};
+    </div>
+    <form class="form form-horizontal" action="">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="file">选择文件：</label>
+            <div class="col-sm-8 col-md-6 form-control-static">
+                <input class="" type="file" id="file" value="请选择" data-id="file">
+            </div>
+            <span class="col-sm-2 help-block small has-warning">格式为：xlsx 或 xls</span>
+        </div>
+
+    </form>
+</div>
+<input class="form-control" type="text" id="fil1e" data-id="file">
+
+</body>
+<script src="/public/package/angular.js"></script>
+<link rel="stylesheet" href="/public/package/bootstrap/css/bootstrap.min.css"/>
+<script src="/public/package/jquery-3.1.0.min.js"></script>
+<script src="/public/package/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    var fns = {};
+    var file = $('[data-id=file]');
+    var myAlert = $('[data-dismiss=myAlert]');
+    myAlert.on('click',function(e){
+//        var alert = myAlert.closest('div.alert');
+//        console.log(alert);
+        $('div.alert').slideUp();
+    });
+    $('div.alert').slideDown();
+    file.on('change', function (e) {
+        var r = new RegExp(/(\.xls|\.xlsx)$/, 'i');
+        console.log(e.target.value);
+        var fa = $(e.target).closest('.form-group');
+        if (r.test(e.target.value)) {
+            //后缀是对的
+            fa.removeClass('has-error');
+            fa.addClass('has-success');
+        } else {
+            //后缀是不对的
+            fa.removeClass('has-success');
+            fa.addClass('has-error');
+        }
+    });
+    //    console.log(file);
+    angular.module('myApp', [])
+            .controller('firstController', ['$scope', function ($scope) {
+                $scope.info={
+                  warning  : "123"
+                };
+                fns.setInfo = function(str){
+                    console.log( $scope.info.warning);
+                    $scope.info.warning = str;
+                    console.log( $scope.info.warning);
+                };
+                console.log( angular.apply);
+
+                $scope.info.warning = '??';
+            }]);
+
+    setTimeout(function(){
+        console.log('--');
+        fns.setInfo('gaga_change');
+    },2000)
+</script>
+</html>

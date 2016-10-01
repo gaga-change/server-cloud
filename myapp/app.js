@@ -9,6 +9,7 @@ var fs=require('fs');
 
 var routes = require('./routes/index');  //获取routes
 var users = require('./routes/users');  //获取users
+var demo = require('./routes/demo');
 
 var config = JSON.parse(fs.readFileSync('../config.json'));
 process.env.PORT=8888;//设置端口号
@@ -17,7 +18,6 @@ process.env.PORT=8888;//设置端口号
 var app = express(); //获取Application对象
 app.set('config',config); //把配置信息设置为全局
 
-console.log(app.get('config').mongo.url);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));  //设置views的路径
 app.engine('.html',ejs.renderFile); // 配置模板
@@ -44,10 +44,11 @@ app.use(favicon(__dirname + '/public/images/favicon.ico')); //配置网站的图
 app.use(bodyParser.json()); //解析请求体的json
 app.use(bodyParser.urlencoded({ extended: false })); //解决请求体的编码问题
 app.use(cookieParser());  //解析cookie
-app.use(express.static(path.join(__dirname, 'public'))); //配置静态文件路径
+app.use('/public',express.static(path.join(__dirname, 'public'))); //配置静态文件路径
 
 app.use('/', routes);  //使用routes
 app.use('/users', users);  //使用users
+app.use('/demo',demo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

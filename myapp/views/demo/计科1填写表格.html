@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/public/package/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/public/package/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/public/package/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/package/angular.js"></script>
+    <!--<script type="text/javascript" src="../package/dong.js"></script>-->
+    <title>好急</title>
+    <style type="text/css">
+        div {
+            transition: width 2s;
+            -webkit-transition: width 2s;
+            -moz-transition: width 2s;
+            -ms-transition: width 2s;
+            -o-transition: width 2s;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="firstController">
+<table>
+    <!--{{attrName}}-->
+    <!--<tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i}}</td></tr>;-->
+    <tr ng-repeat="i in attrName" ng-repeat="i in myPerson">
+        <td>{{i}}</td>
+        <td>{{}}</td>
+    </tr>
+</table>
+<!--模态框-->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">提示 ~ ~</h4>
+            </div>
+            <div class="modal-body">
+                <p data-id="info">{{info}}</p>
+                <div class="text-info" data-id="person">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="container">
+    <form class="form form-horizontal" action="">
+        <div class="form-group">
+            <label class=" col-sm-2 control-label" for="name"> 您的姓名</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="text" id="name" required placeholder="姓名" ng-model="person.name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label">家庭困难</label>
+            <div class="col-sm-8 col-md-6">
+                <label class="radio-inline"> <input class=" " type="radio" name="kun" id="kun_y" ng-model="person.hardKind" value="困难">困难</label>
+                <label class="radio-inline"> <input class="" type="radio" name="kun" id="kun_n" ng-model="person.hardKind" value="不困难">不困难</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label" for="hsAddress"> 高考地区</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="text" id="hsAddress" placeholder="高考报名地区" ng-model="person.hsAddress">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label">联系方式</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type='tel' placeholder="您的联系方式" ng-model="person.phone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label" for="phone"> 家庭电话</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="tel" id="phone" placeholder="家庭的联系方式" ng-model="person.faPhone">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label" for="qq">QQ号码</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="text" id="qq" placeholder="QQ号码" ng-model="person.qq">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label" for="email">QQ邮箱</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="email" id="email" placeholder="QQ邮箱" ng-model="person.email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label" for="address">家庭地址</label>
+            <div class="col-sm-8 col-md-6">
+                <input class="form-control" type="text" id="address" placeholder="家庭住址" ng-model="person.address">
+            </div>
+        </div>
+        <div class="form-group" >
+            <label class="col-sm-2  control-label">城乡生源</label>
+            <div class="col-sm-8 col-md-6">
+                <label class="radio-inline"><input type="radio" name="cor" ng-model="person.coc" value="城市">城市</label>
+                <label class="radio-inline"><input type="radio" name="cor" ng-model="person.coc" value="农村">农村</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label">培养方式</label>
+            <div class="col-sm-8 col-md-6">
+                <label class="radio-inline"><input type="radio" checked ng-model="person.train" value="非定向">非定向</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2  control-label">政治面貌</label>
+            <div class="col-sm-8 col-md-6">
+                <label class="radio-inline"><input type="radio" ng-model="person.political" value="团员">团员 </label>
+                <label class="radio-inline"><input type="radio" ng-model="person.political" value="党员">党员</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label"></label>
+            <div class="col-sm-4 col-md-3" style="margin-bottom:10px">
+                <button class="form-control btn btn-info" type="button" ng-click="submit()">提交</button>
+            </div>
+            <div class="col-sm-4 col-md-3 "  >
+                <button class="form-control btn btn-default" type="reset" ng-click="see()">查看</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+<script type="text/javascript">
+
+    angular.module('myApp',[])
+            .controller('firstController',function($scope,$http){
+                $scope.attrName=['ksh','syssdm','学号','姓名','困难生类别',
+                    '生源地（高考报名地区）','联系方式','家庭电话','QQ号','邮箱',
+                    '家庭住址','城乡生源','培养方式','政治面貌','性别','专业','学院'];
+                $scope.person = {
+                    name : '',
+                    hardKind : '',
+                    hsAddress :'',
+                    phone : '',
+                    faPhone : '',
+                    qq : '',
+                    email : '',
+                    address :'',
+                    coc : '',
+                    train : '',
+                    political : ''
+                };
+                $scope.getPerson ={};
+                $scope.info = '';
+                $scope.submit = function(){
+                    console.log($scope.person);
+                    $http.post('/gaga',JSON.stringify($scope.person)).success(function(data){
+                        console.log(data);
+                        $scope.info=data.info;
+                        if(data.err){
+//                            alert(data.info);
+                            $('[data-id=info]').removeClass('text-info');
+                            $('[data-id=info]').addClass('text-danger');
+                        }else{
+                            $('[data-id=info]').removeClass('text-danger');
+                            $('[data-id=info]').addClass('text-info');
+                            $scope.info=data.info;
+                        }
+                        $('#myModal').modal('toggle')
+                    });
+                }
+                $scope.see = function(){
+//                    console.log($scope.person);
+                    $http.post('/getPerson',JSON.stringify($scope.person)).success(function(data){
+                        console.log(data);
+//                       alert("恭喜 "+data);
+                        $scope.info=data.info;
+                        if(data.err){
+//                            alert(data.info);
+                            $('[data-id=info]').removeClass('text-info');
+                            $('[data-id=info]').addClass('text-danger');
+                        }else{
+                            $('[data-id=info]').removeClass('text-danger');
+                            $('[data-id=info]').addClass('hidden');
+                            $('[data-id=person]').addClass('');
+                            $scope.myPerson=data.info;
+                        }
+                        $('#myModal').modal('toggle')
+                    });
+
+                }
+            });
+//    function Person(name, hardKind, hsAddress, phone, faPhone, qq, email, address, coc, train, political) {
+//        this.name = name; //姓名
+//        this.hardking = hardKind;  //困难度 困难|不困难
+//        this.hsAddress = hsAddress; //高考地
+//        this.phone = phone;  //手机号码
+//        this.faPhone = faPhone; //家庭联系方式
+//        this.qq = qq;  //qq
+//        this.email = email; //邮箱
+//        this.address = address; //地址
+//        this.coc = coc; //城市或农村
+//        this.train = train; //培训方式
+//        this.political = political; //政治面貌
+//    }
+</script>
+</html>
