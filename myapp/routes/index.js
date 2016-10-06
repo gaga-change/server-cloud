@@ -1,14 +1,13 @@
 var express = require('express');
-var router = express.Router();  //获取路由对象
+var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    console.log(req.cookies);
-    res.render('index.html', {title: 'Express'});
+    res.render('index', {title: 'Express'});
 });
 
 router.post('/test', function (req, res, next) {
-    
+    res.send('gaga');
 });
 
-module.exports = router;   //设置为本文件的 输入
+module.exports = router;

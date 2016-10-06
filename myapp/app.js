@@ -5,17 +5,23 @@ var logger = require('morgan'); //显示请求
 var cookieParser = require('cookie-parser'); //coolie 的解析
 var bodyParser = require('body-parser'); //post请求体的解析
 var ejs = require('ejs');
+var fs=require('fs');
 
 var routes = require('./routes/index');  //获取routes
 var users = require('./routes/users');  //获取users
 
+var config = JSON.parse(fs.readFileSync('../config.json'));
+process.env.PORT=8888;//设置端口号
+
 
 var app = express(); //获取Application对象
+app.set('config',config); //把配置信息设置为全局
 
+console.log(app.get('config').mongo.url);
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));  //设置views的路径
 app.engine('.html',ejs.renderFile); // 配置模板
-app.set('view engine', 'jade');  //设置模板
+app.set('view engine', 'html');  //设置模板
 
 app.use(favicon(__dirname + '/public/images/favicon.ico')); //配置网站的图标的位置
 
@@ -31,9 +37,9 @@ app.use(favicon(__dirname + '/public/images/favicon.ico')); //配置网站的图
 // ::1 - GET / HTTP/1.1 304 - - 10.397 ms
 // app.use(logger('short'));
 // GET / 304 - - 10.260 ms
-app.use(logger('tiny')); //输出请求信息
+//app.use(logger('tiny')); //输出请求信息
 // GET / 304 11.555 ms - -
-// app.use(logger('dev'));
+ app.use(logger('dev'));
 
 app.use(bodyParser.json()); //解析请求体的json
 app.use(bodyParser.urlencoded({ extended: false })); //解决请求体的编码问题
@@ -57,13 +63,13 @@ app.use(function(req, res, next) {
 // will print stacktrace
 //开发错误处理程序
 if (app.get('env') === 'development') {  //得到内置的 env  变量
-  console.log('--development');
+  //console.log('--development');
   //如果程序的状态是是发展,就是所之前没有程序没错误,就继续走着,默认会执行下面的代码
   app.use(function(err, req, res, next) {
-    console.log('development error handler');
+    //console.log('development error handler');
     res.status(err.status || 500);
     //返回一个错误html
-    res.render('error.html', {
+    res.render('error', {
       message: err.message,
       error: err
     });
@@ -75,7 +81,7 @@ if (app.get('env') === 'development') {  //得到内置的 env  变量
 app.use(function(err, req, res, next) {
   //普通的err ， 返回 错误HTML；
   res.status(err.status || 500);
-  console.log('production error handler')
+  //console.log('production error handler')
   res.render('error', {
     message: err.message,
     error: {}

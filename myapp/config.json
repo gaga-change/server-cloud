@@ -1,0 +1,9 @@
+{
+  "icp" :"浙ICP备16035069号",
+  "mongo" :{
+    "name":"yan",
+    "password":"123",
+    "db":"db",
+    "url":"mongodb://yan:123@yanjundong.com:27017/db"
+  }
+}
