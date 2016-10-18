@@ -1,0 +1,19 @@
+{
+  "index": {
+    "/": {
+      "method": "get",
+      "res": "index.html"
+    }
+  },
+  "tools": {
+    "/getJson": {
+      "method": "post",
+      "req": {
+        "url": "url路径"
+      },
+      "res": {
+        "data": "数据"
+      }
+    }
+  }
+}

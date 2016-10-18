@@ -9,13 +9,14 @@ var fs=require('fs');
 
 var routes = require('./routes/index');  //获取routes
 var users = require('./routes/users');  //获取users
+var tools = require('./routes/tools');
 
-var config = JSON.parse(fs.readFileSync('config.json'));
+// var config = JSON.parse(fs.readFileSync('config.json'));
 process.env.PORT=8888;//设置端口号
 
 
 var app = express(); //获取Application对象
-app.set('config',config); //把配置信息设置为全局
+// app.set('config',config); //把配置信息设置为全局
 
 // console.log(app.get('config').mongo.url);
 // view engine setup
@@ -48,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public'))); //配置静态文件路
 
 app.use('/', routes);  //使用routes
 app.use('/users', users);  //使用users
+app.use('/tools', tools);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
