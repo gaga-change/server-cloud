@@ -15,7 +15,6 @@ router.post('/jsonp', function (req, res, next) {
     res.set({
         'Access-Control-Allow-Origin': '*'
     });
-    console.log(myUrl);
     http.get(myUrl, function (response) {
         response.setEncoding('utf8');
         var data = "";
