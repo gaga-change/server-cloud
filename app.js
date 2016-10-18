@@ -10,7 +10,7 @@ var fs=require('fs');
 var routes = require('./routes/index');  //获取routes
 var users = require('./routes/users');  //获取users
 
-var config = JSON.parse(fs.readFileSync('../config.json'));
+var config = JSON.parse(fs.readFileSync('config.json'));
 process.env.PORT=8888;//设置端口号
 
 
