@@ -11,7 +11,6 @@ router.get('/', function (req, res, next) {
     res.send('hello world !');
 });
 router.post('/jsonp', function (req, res, next) {
-    console.log(res);
     var myUrl = req.body.url;
     res.set({
         'Access-Control-Allow-Origin': '*'
