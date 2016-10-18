@@ -6,7 +6,7 @@
     }
   },
   "tools": {
-    "/getJson": {
+    "/jsonp": {
       "method": "post",
       "req": {
         "url": "url路径"

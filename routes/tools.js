@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
     console.log("-------------");
     res.send('hello world !');
 });
-router.post('/getJson', function (req, res, next) {
+router.post('/jsonp', function (req, res, next) {
     console.log(res);
     var myUrl = req.body.url;
     res.set({
