@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'public'));  //设置views的路径
 app.engine('.html',ejs.renderFile); // 配置模板
 app.set('view engine', 'html');  //设置模板
 
-app.use(favicon(__dirname + '/public/images/favicon.ico')); //配置网站的图标的位置
+app.use(favicon(__dirname + '/public/favicon.ico')); //配置网站的图标的位置
 
 // ::1 - - [25/Sep/2016:08:52:55 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"
 //::1 - - [25/Sep/2016:08:50:51 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36"

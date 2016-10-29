@@ -22,7 +22,6 @@ router.post('/jsonp', function (req, res, next) {
             data += result;
         });
         response.on('end', function () {
-            // console.log(data);
             res.send({data: data});
         });
     });
