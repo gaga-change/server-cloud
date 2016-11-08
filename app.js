@@ -12,7 +12,7 @@ var users = require('./routes/users');  //获取users
 var tools = require('./routes/tools');
 
 // var config = JSON.parse(fs.readFileSync('config.json'));
-process.env.PORT=8888;//设置端口号
+process.env.PORT=8080;//设置端口号
 
 
 var app = express(); //获取Application对象
