@@ -55,7 +55,19 @@ h3 {
 }
 /*总列表*/
 .ul-fa > li {
-  margin: 20px 0;
+  padding: 10px 5px;
+  margin: 10px 0;
+  background-color: #fff;
+  transition: all 1s ease;
+  color: #222;
+}
+.ul-fa > li:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: #dedede;
+  color: #977e7e;
+}
+.ul-fa > li:hover h3 {
+  color: #977e7e;
 }
 .ul-fa .title {
   padding: 0 0px;
@@ -128,12 +140,13 @@ body {
 .container {
   min-width: 970px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .p-left {
   background-color: #977A5C;
   color: #f5f5f5;
   padding-top: 10px;
-  height: 1011px;
+  height: 1080px;
 }
 .centerCenter {
   display: -webkit-box;

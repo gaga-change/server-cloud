@@ -17,7 +17,19 @@
 .ul-fa {
   & > li {
     //border: 1px solid red;
-    margin: 20px 0;
+    padding: 10px 5px;
+    margin: 10px 0;
+    background-color: #fff;
+    transition: all 1s ease;
+    color: #222;
+    &:hover {
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, .2),-1px -1px 1px 1px rgba(0, 0, 0, .2);
+      background-color: #dedede;
+      color: #977e7e;
+      h3{
+        color: #977e7e;
+      }
+    }
   }
   .title {
     padding: 0 0px;
@@ -62,7 +74,7 @@
     }
     ul {
       list-style-type: circle;
-      padding:0 15px;
+      padding: 0 15px;
     }
   }
 }
