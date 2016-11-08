@@ -1,0 +1,10 @@
+.two-size:before {
+  content: " ";
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+}
+.border-middle {
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+}

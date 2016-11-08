@@ -1,0 +1,46 @@
+/*头*/
+img.head-pic {
+  display: block;
+  border-radius: 5px;
+}
+.p-left > ul,
+.p-left > h3 {
+  margin-top: 20px;
+  max-width: 205px;
+}
+/*地址*/
+ul.address-msg address {
+  display: inline-block;
+  margin: 0;
+}
+ul.address-msg > li {
+  margin: 2rem 0;
+}
+ul.address-msg > li span:first-of-type {
+  margin-right: 1rem;
+}
+/*能力*/
+ul.ability-list {
+  font-size: 0.8rem;
+}
+ul.ability-list .ability-bar {
+  margin: 0.1rem 0 0.8rem 0;
+  height: 1.1rem;
+  background-color: #CABCAF;
+}
+h3 {
+  color: #CABCAF;
+}
+/*爱好*/
+.hobby-list {
+  color: #CABCAF;
+}
+.hobby-list > li {
+  margin: 5px 8px;
+  float: left;
+  width: 50px;
+}
+.hobby-list > li > img {
+  display: block;
+  max-width: 100%;
+}

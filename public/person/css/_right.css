@@ -1,0 +1,47 @@
+extend ' .two-size' has no matches
+.ul-fa .title h3 {
+  border-bottom: 1px #cccdcc solid ;
+}
+.p-right ul {
+  padding: 0;
+  list-style-type: none;
+}
+.p-right .my-work {
+  display: block;
+  color: #cd8fba;
+  font-size: 2rem;
+}
+/*总列表*/
+.ul-fa > li {
+  margin: 20px 0;
+}
+.ul-fa .title {
+  padding: 0 0px;
+  margin-bottom: 10px;
+}
+.ul-fa .title img {
+  display: inline-block;
+  width: 5.5%;
+}
+.ul-fa .title h3 {
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+  padding: 0 0 2px 10px;
+  vertical-align: middle;
+}
+/*教育背景*/
+.jiaoyu-list li {
+  float: left;
+}
+/*项目经验*/
+.xiangmu-lsit > li {
+  margin: 1rem 0;
+}
+.xiangmu-lsit > li .row {
+  margin-bottom: 0.5rem;
+}
+.xiangmu-lsit > li ul {
+  list-style-type: circle;
+  padding: 0 15px;
+}

@@ -1,0 +1,63 @@
+//2016年11月07日19:00:30 郑州青云
+@import "_left";
+@import "_right";
+@import (reference) "_variable";
+@import "_pub";
+@import "_animate";
+
+html {
+  font-family: "STKaiti", sans-serif;
+}
+body {
+  padding-top: 20px;
+}
+
+.container {
+  min-width: 970px;
+  margin-bottom: 20px;
+}
+
+.p-left {
+  background-color: @left-color;
+  color: @left-font-color;
+  padding-top: 10px;
+  height: 1011px;
+
+}
+
+
+.p-right {
+  //background-color: green;
+  //height: 100%;
+}
+
+
+
+.centerCenter {
+  display: -webkit-box;
+
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+
+  display: -o-box;
+  -o-box-orient: horizontal;
+  -o-box-pack: center;
+  -o-box-align: center;
+
+
+  display: -ms-box;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}

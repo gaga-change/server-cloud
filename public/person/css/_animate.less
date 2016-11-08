@@ -1,0 +1,25 @@
+
+.ability-move.ng-enter {
+  transition: 1s linear;
+  transform: translateX(-200px);
+  animation: move 2s linear;
+}
+
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translate(-800px) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px) rotate(-360deg);
+  }
+}
+
+.ability-move.ng-enter-stagger {
+  animation-delay: 300ms;
+  transition-duration: 0s;
+}
+
+
+

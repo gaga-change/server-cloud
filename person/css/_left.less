@@ -1,0 +1,59 @@
+@import (reference) "_variable";
+
+/*头*/
+img.head-pic {
+  display: block;
+  border-radius: 5px;
+}
+
+.p-left {
+  & > ul, & > h3 {
+    margin-top: 20px;
+    max-width: 205px;
+  }
+}
+
+/*地址*/
+ul.address-msg {
+
+  address {
+    display: inline-block;
+    margin: 0;
+  }
+  & > li {
+    margin: 2rem 0;
+    span:first-of-type {
+      margin-right: 1rem;
+    }
+  }
+}
+
+/*能力*/
+ul.ability-list {
+  font-size: 0.8rem;
+  .ability-bar {
+    margin: 0.1rem 0 0.8rem 0;
+    height: 1.1rem;
+    background-color: @ability-color;
+  }
+}
+
+h3 {
+  color: @ability-color;
+}
+
+/*爱好*/
+.hobby-list {
+  color: @ability-color;
+  //max-width: 1000px !important;
+  & > li {
+    margin: 5px 8px;
+    //padding: 0 8px;
+    float: left;
+    width: 50px;
+    & > img {
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

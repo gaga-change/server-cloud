@@ -1,0 +1,159 @@
+/*头*/
+img.head-pic {
+  display: block;
+  border-radius: 5px;
+}
+.p-left > ul,
+.p-left > h3 {
+  margin-top: 20px;
+  max-width: 205px;
+}
+/*地址*/
+ul.address-msg address {
+  display: inline-block;
+  margin: 0;
+}
+ul.address-msg > li {
+  margin: 2rem 0;
+}
+ul.address-msg > li span:first-of-type {
+  margin-right: 1rem;
+}
+/*能力*/
+ul.ability-list {
+  font-size: 0.8rem;
+}
+ul.ability-list .ability-bar {
+  margin: 0.1rem 0 0.8rem 0;
+  height: 1.1rem;
+  background-color: #CABCAF;
+}
+h3 {
+  color: #CABCAF;
+}
+/*爱好*/
+.hobby-list {
+  color: #CABCAF;
+}
+.hobby-list > li {
+  margin: 5px 8px;
+  float: left;
+  width: 50px;
+}
+.hobby-list > li > img {
+  display: block;
+  max-width: 100%;
+}
+.p-right ul {
+  padding: 0;
+  list-style-type: none;
+}
+.p-right .my-work {
+  display: block;
+  color: #cd8fba;
+  font-size: 2rem;
+}
+/*总列表*/
+.ul-fa > li {
+  margin: 20px 0;
+}
+.ul-fa .title {
+  padding: 0 0px;
+  margin-bottom: 10px;
+}
+.ul-fa .title img {
+  display: inline-block;
+  width: 5.5%;
+}
+.ul-fa .title h3 {
+  display: inline-block;
+  width: 90%;
+  margin: 0;
+  padding: 0 0 2px 10px;
+  vertical-align: middle;
+}
+/*教育背景*/
+.jiaoyu-list li {
+  float: left;
+}
+/*项目经验*/
+.xiangmu-lsit > li {
+  margin: 1rem 0;
+}
+.xiangmu-lsit > li .row {
+  margin-bottom: 0.5rem;
+}
+.xiangmu-lsit > li ul {
+  list-style-type: circle;
+  padding: 0 15px;
+}
+.ul-fa .title h3 {
+  border-bottom: 1px #cccdcc solid ;
+}
+.two-size:before {
+  content: " ";
+  display: inline-block;
+  width: 2rem;
+  height: 1rem;
+}
+.border-middle {
+  border-left: 1px solid gainsboro;
+  border-right: 1px solid gainsboro;
+}
+.ability-move.ng-enter {
+  transition: 1s linear;
+  transform: translateX(-200px);
+  animation: move 2s linear;
+}
+@keyframes move {
+  from {
+    opacity: 0;
+    transform: translate(-800px) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px) rotate(-360deg);
+  }
+}
+.ability-move.ng-enter-stagger {
+  animation-delay: 300ms;
+  transition-duration: 0s;
+}
+html {
+  font-family: "STKaiti", sans-serif;
+}
+body {
+  padding-top: 20px;
+}
+.container {
+  min-width: 970px;
+  margin-bottom: 20px;
+}
+.p-left {
+  background-color: #977A5C;
+  color: #f5f5f5;
+  padding-top: 10px;
+  height: 1011px;
+}
+.centerCenter {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -o-box;
+  -o-box-orient: horizontal;
+  -o-box-pack: center;
+  -o-box-align: center;
+  display: -ms-box;
+  -ms-box-orient: horizontal;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  display: box;
+  box-orient: horizontal;
+  box-pack: center;
+  box-align: center;
+}

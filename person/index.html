@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="myApp" ng-cloak="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>严俊东简历</title>
+	<meta name="description" content="个人简历">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/animate.min.css">
+	<link rel="stylesheet" href="css/i.css">
+</head>
+<body>
+<div class="container" ng-controller="AbilityCtrl" data-id="con">
+	<div class="col-xs-3 p-left wow fadeIn" data-id="left">
+		<img class="head-pic center-block wow rollIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: rollIn;" src="img/081413142.JPG" alt="个人照片">
+		<ul class="address-msg list-unstyled center-block">
+			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-heart-empty"></span>23岁</li>
+			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-home"></span>
+				<address>浙江省金华市</address>
+			</li>
+			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-phone"></span>13243177263</li>
+			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-envelope"></span>
+				<address>1172482914@qq.com</address>
+			</li>
+		</ul>
+		<ul class="ability-list list-unstyled center-block">
+			<li class="ability-move" ng-repeat="i in abilityList">
+				<span ng-bind="i.name"></span> <br>
+				<div class="ability-bar" style="width: {{i.percentage}}"></div>
+			</li>
+		</ul>
+		<h3 class="text-center wow rotateIn">兴趣爱好</h3>
+		<ul class="hobby-list list-inline clearfix center-block">
+			<li class="text-center wow fadeIn" data-wow-delay="5s">
+				<img src="img/music.png" alt="music"> <span>音乐</span>
+			</li>
+			<li class="text-center wow fadeIn" data-wow-delay="5.2s">
+				<img src="img/movie.png" alt="music"> <span>电影</span>
+			</li>
+			<li class="text-center wow fadeIn"  data-wow-delay="5.4s">
+				<img src="img/tour.png" alt="music"> <span>旅游</span>
+			</li>
+			<li class="text-center wow fadeIn" data-wow-delay="5.6s">
+				<img src="img/fish.png" alt="music"> <span>钓鱼</span>
+			</li>
+			<li class="text-center wow fadeIn" data-wow-delay="5.8s">
+				<img src="img/basketball.png" alt="music"> <span>篮球</span>
+			</li>
+			<li class="text-center wow fadeIn" data-wow-delay="6s">
+				<img src="img/lol.png" alt="music"> <span>LOL</span>
+			</li>
+		</ul>
+	</div>
+	<div class="col-xs-9 p-right" data-id="right">
+		<h1 class="wow rotateIn">严俊东</h1>
+		<span class="my-work wow bounceInDown" data-wow-delay="1s">求职意向前端工程师</span>
+		<ul class="ul-fa">
+			<li class="jiaoyu wow slideInRight" data-wow-delay="0.2s">
+				<div class="title clearfix">
+					<img class="" src="img/jiaoyu.png" alt="教育背景">
+					<h3 class="">教育背景</h3>
+				</div>
+				<div class="jiaoyu-list">
+					<ul class="clearfix">
+						<li class="col-xs-3 text-center">2013.10至今</li>
+						<li class="col-xs-3 border-middle text-center">河南城建学院</li>
+						<li class="col-xs-3 text-center">计算机科学与技术</li>
+					</ul>
+					<p class="two-size">
+						在校期间通过学习掌握了计算机硬件、计算机软件、计算机网络、数据结构、软件工程、UI设计的基本知识，并且具备了扎实的计算机软件的基本理论和基本知识、具备用先进的编程思想、方法、组织和技术以及数学的基本运用。拥有基本的编程技术、解决问题能力、自学能力。
+					</p>
+				</div>
+			</li>
+			<li class="xiangmu wow slideInRight" data-wow-delay="0.4s">
+				<div class="title clearfix">
+					<img src="img/xiangmu.png" alt="项目经验">
+					<h3>项目经验</h3>
+				</div>
+				<ul class="xiangmu-lsit">
+					<li>
+						<div class="row">
+							<span class="col-xs-3 text-center">2015.10-2016.1</span>
+							<span class="col-xs-3 border-middle text-center">职工信息管理系统</span>
+							<span class="col-xs-3 text-center">项目小组组长</span>
+						</div>
+						<ul>
+							<li>
+								项目运用技术: Java、JSP、MySQL、HTML、CSS、JavaScript
+							</li>
+							<li>
+								参与整个项目结构的设计,需求分析,模块分析,数据库设计等。
+							</li>
+							<li>
+								负责前端页面的设计和编写,以及一些后端代码的编写。
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="row">
+							<span class="col-xs-3 text-center">2016.4-2016.5</span>
+							<span class="col-xs-3 border-middle text-center">普通话报名系统</span>
+							<span class="col-xs-3 text-center">项目小组组长</span>
+						</div>
+						<ul>
+							<li>
+								项目运用技术: Java、JSP、MySQL、HTML、CSS、JavaScript、jQuery。
+							</li>
+							<li>
+								负责审核校验小组成员的需求分析、功能分析和模块涉及。
+							</li>
+							<li>
+								负责前端页面的编写,动态效果设计。
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="row">
+							<span class="col-xs-3 text-center">2016.9-2016.10</span>
+							<span class="col-xs-3 border-middle text-center">党员'一点通'</span>
+							<span class="col-xs-3 text-center">开发小组成员</span>
+						</div>
+						<ul>
+							<li>
+								项目运用技术: ASP.NET、Oracle、HTML、CSS、JavaScript、jQuery、AngularJS、Bootstrap
+							</li>
+							<li>
+								负责管理员端页面的设计及编写。
+							</li>
+						</ul>
+					</li>
+					<li>
+						<div class="row">
+							<span class="col-xs-3 text-center">2016.11-1016-12</span>
+							<span class="col-xs-3 border-middle text-center">新闻web app</span>
+							<span class="col-xs-3 text-center">单人开发</span>
+						</div>
+						<ul>
+							<li>
+								项目运用技术: HTML、CSS、JavaScript、jQuery、AngularJS、Bootstrap、Animate.css
+							</li>
+							<li>
+								新闻数据通过jsonp方法向一些服务器获取
+							</li>
+							<li>
+								自适应所有移动端的尺寸
+							</li>
+							<li>
+								解决ie8以上的兼容问题
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+			</li>
+			<li class="rongyu wow slideInRight" data-wow-delay="0.6s">
+				<div class="title clearfix">
+					<img src="img/rongyu.png" alt="奖项荣誉">
+					<h3>奖项荣誉</h3>
+				</div>
+				<ul>
+					<li>
+						2015.10 程序设计大赛二等奖
+					</li>
+					<li>
+						2015.10 获国家奖学金
+					</li>
+					<li>
+						2016.10 获国家奖学金
+					</li>
+				</ul>
+			</li>
+			<li class="ziwo wow slideInRight" data-wow-delay="0.8s">
+				<div class="title clearfix">
+					<img src="img/ziwo.png" alt="自我评价">
+					<h3>自我评价</h3>
+				</div>
+				<p class="two-size">
+					本人本科学历，计算机专业。热爱编程，享受编程中解决问题的成功的那一刻。只要发现一些bug就会去想怎么解决，尤其是解决的那一瞬间感觉心情很愉悦。我有时会为了解决一个bug编程到12点之后，但不会为了玩游戏而熬夜。学习能力较强，同时理解力较强。我是从后端转前端的一个人，可以独立开发。喜欢开发网页的各种动态效果。
+					拥有基本的编程意识，了解整个网站开发的流程。立志成为一条大牛。我会为此而奋斗！
+				</p>
+
+			</li>
+		</ul>
+	</div>
+</div>
+<script src="js/lib/wow.min.js"></script>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-animate.min.js"></script>
+<script src="js/i.js"></script>
+<script>
+	new WOW().init();
+</script>
+</body>
+</html>
