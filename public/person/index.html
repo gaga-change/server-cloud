@@ -1,19 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="en" ng-app="myApp" ng-cloak="">
+<html class="no-js" lang="en" ng-app="myApp" ng-cloak>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>严俊东简历</title>
 	<meta name="description" content="个人简历">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
-	<link rel="stylesheet" href="css/lib/animate.min.css">
+	<link rel="stylesheet" href="/css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/lib/animate.min.css">
 	<link rel="stylesheet" href="css/i.css">
-	<script src="js/lib/wow.min.js"></script>
-	<script src="js/lib/jquery.min.js"></script>
-	<script src="js/lib/angular.min.js"></script>
-	<script src="js/lib/angular-animate.min.js"></script>
-	<script src="js/i.js"></script>
+	<script src="/js/lib/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
@@ -21,7 +17,9 @@
 <body>
 <div class="container" ng-controller="AbilityCtrl" data-id="con">
 	<div class="col-xs-3 p-left wow fadeIn" data-id="left">
-		<img class="head-pic center-block wow rollIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: rollIn;" src="img/081413142.JPG" alt="个人照片">
+		<img class="head-pic center-block wow rollIn" data-wow-delay="0.5s"
+			 style="visibility: visible; animation-delay: 0.5s; animation-name: rollIn;" src="img/081413142.JPG"
+			 alt="个人照片">
 		<ul class="address-msg list-unstyled center-block">
 			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-heart-empty"></span>23岁</li>
 			<li class="wow fadeInLeft"><span class="glyphicon glyphicon-home"></span>
@@ -32,7 +30,7 @@
 				<address>1172482914@qq.com</address>
 			</li>
 		</ul>
-		<ul class="ability-list list-unstyled center-block">
+		<ul class="ability-list list-unstyled center-block" data-id="abilityList">
 			<li class="ability-move" ng-repeat="i in abilityList">
 				<span ng-bind="i.name"></span> <br>
 				<div class="ability-bar" style="width: {{i.percentage}}"></div>
@@ -46,7 +44,7 @@
 			<li class="text-center wow fadeIn" data-wow-delay="5.2s">
 				<img src="img/movie.png" alt="music"> <span>电影</span>
 			</li>
-			<li class="text-center wow fadeIn"  data-wow-delay="5.4s">
+			<li class="text-center wow fadeIn" data-wow-delay="5.4s">
 				<img src="img/tour.png" alt="music"> <span>旅游</span>
 			</li>
 			<li class="text-center wow fadeIn" data-wow-delay="5.6s">
@@ -70,7 +68,7 @@
 					<h3 class="">教育背景</h3>
 				</div>
 				<div class="jiaoyu-list">
-					<ul class="clearfix">
+					<ul class="clearfix title-row">
 						<li class="col-xs-3 text-center">2013.10至今</li>
 						<li class="col-xs-3 border-middle text-center">河南城建学院</li>
 						<li class="col-xs-3 text-center">计算机科学与技术</li>
@@ -87,7 +85,7 @@
 				</div>
 				<ul class="xiangmu-lsit">
 					<li>
-						<div class="row">
+						<div class="row title-row">
 							<span class="col-xs-3 text-center">2015.10-2016.1</span>
 							<span class="col-xs-3 border-middle text-center">职工信息管理系统</span>
 							<span class="col-xs-3 text-center">项目小组组长</span>
@@ -105,7 +103,7 @@
 						</ul>
 					</li>
 					<li>
-						<div class="row">
+						<div class="row title-row">
 							<span class="col-xs-3 text-center">2016.4-2016.5</span>
 							<span class="col-xs-3 border-middle text-center">普通话报名系统</span>
 							<span class="col-xs-3 text-center">项目小组组长</span>
@@ -123,7 +121,7 @@
 						</ul>
 					</li>
 					<li>
-						<div class="row">
+						<div class="row title-row">
 							<span class="col-xs-3 text-center">2016.9-2016.10</span>
 							<span class="col-xs-3 border-middle text-center">党员'一点通'</span>
 							<span class="col-xs-3 text-center">开发小组成员</span>
@@ -138,7 +136,7 @@
 						</ul>
 					</li>
 					<li>
-						<div class="row">
+						<div class="row title-row">
 							<span class="col-xs-3 text-center">2016.11-1016-12</span>
 							<span class="col-xs-3 border-middle text-center">新闻web app</span>
 							<span class="col-xs-3 text-center">单人开发</span>
@@ -192,6 +190,11 @@
 		</ul>
 	</div>
 </div>
-
+<script src="/js/lib/jquery.min.js"></script>
+<script src="/js/lib/angular.min.js"></script>
+<script src="/js/lib/angular-animate.min.js"></script>
+<script src="js/i.js"></script>
+<script src="js/lib/Chart.min.js"></script>
+<script src="js/c.js"></script>
 </body>
 </html>

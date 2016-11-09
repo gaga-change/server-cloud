@@ -57,3 +57,6 @@ extend ' .two-size' has no matches
   list-style-type: circle;
   padding: 0 15px;
 }
+.title-row {
+  font-size: 1.6rem;
+}

@@ -5,7 +5,7 @@ img.head-pic {
 }
 .p-left > ul,
 .p-left > h3 {
-  margin-top: 20px;
+  margin-top: 50px;
   max-width: 205px;
 }
 /*地址*/
@@ -21,7 +21,7 @@ ul.address-msg > li span:first-of-type {
 }
 /*能力*/
 ul.ability-list {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 ul.ability-list .ability-bar {
   margin: 0.1rem 0 0.8rem 0;
@@ -33,6 +33,7 @@ h3 {
 }
 /*爱好*/
 .hobby-list {
+  margin-top: 20px;
   color: #CABCAF;
 }
 .hobby-list > li {
