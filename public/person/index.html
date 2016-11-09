@@ -9,12 +9,24 @@
 	<link rel="stylesheet" href="/css/lib/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/lib/animate.min.css">
 	<link rel="stylesheet" href="css/i.css">
+	<script src="js/lib/Chart.min.js"></script>
 	<script src="/js/lib/wow.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+	</style>
 </head>
 <body>
+<div class="chart animated" data-id="chart-fa">
+	<span  class="clear  glyphicon glyphicon-remove" data-id="clear"></span>
+	<canvas class="" id="canvas"></canvas>
+</div>
 <div class="container" ng-controller="AbilityCtrl" data-id="con">
 	<div class="col-xs-3 p-left wow fadeIn" data-id="left">
 		<img class="head-pic center-block wow rollIn" data-wow-delay="0.5s"
@@ -194,7 +206,6 @@
 <script src="/js/lib/angular.min.js"></script>
 <script src="/js/lib/angular-animate.min.js"></script>
 <script src="js/i.js"></script>
-<script src="js/lib/Chart.min.js"></script>
 <script src="js/c.js"></script>
 </body>
 </html>

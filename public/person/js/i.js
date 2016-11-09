@@ -1,7 +1,7 @@
 /**
  * Created by jundong on 16/11/7.
  */
-
+var abilityList = [];
 var app = angular.module('myApp', ['ngAnimate'])
     .controller('AbilityCtrl', ['$scope', '$timeout', function ($scope, $timeout) {
         $scope.abilityList = [];
@@ -9,11 +9,12 @@ var app = angular.module('myApp', ['ngAnimate'])
             $scope.$apply(function () {
                 $scope.abilityList = getAbilityList();
             })
-        },1);
+        }, 1);
     }]);
 
 function getAbilityList() {
-    var abilityList = [
+    if (abilityList.length > 0)return abilityList;
+    abilityList = [
         {name: 'HTML', percentage: '100%'},
         {name: 'CSS', percentage: '100%'},
         {name: 'JavaScript', percentage: '100%'},

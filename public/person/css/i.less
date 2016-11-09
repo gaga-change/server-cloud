@@ -7,6 +7,8 @@
 
 html {
   font-family: "STKaiti", sans-serif;
+  //color: rgba(192, 101, 134, 0.35);
+  //color: #cd8fba;
 }
 body {
   padding-top: 20px;
@@ -32,6 +34,35 @@ body {
   //height: 100%;
 }
 
+.chart {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  display: none;
+  //transition: fadeInLeft 1s ease;
+  &:extend(.centerCenter);
+  .clear {
+    position: absolute;
+    top: 20px ;
+    right: 40px ;
+    font-size: 40px;
+    color: rgba(204, 73, 74, 0.86);
+    cursor: pointer;
+    z-index: -10;
+    visibility: hidden;
+  }
+  &.slideOutLeft, &.fadeIn {
+    display: block;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.86);
+    &>.clear {
+      z-index: 10;
+      visibility: visible;
+    }
+  }
+}
 
 
 .centerCenter {

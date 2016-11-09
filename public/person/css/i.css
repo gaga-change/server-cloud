@@ -152,7 +152,37 @@ body {
   padding-top: 10px;
   height: 1080px;
 }
-.centerCenter {
+.chart {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  display: none;
+}
+.chart .clear {
+  position: absolute;
+  top: 20px ;
+  right: 40px ;
+  font-size: 40px;
+  color: rgba(204, 73, 74, 0.86);
+  cursor: pointer;
+  z-index: -10;
+  visibility: hidden;
+}
+.chart.slideOutLeft,
+.chart.fadeIn {
+  display: block;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.86);
+}
+.chart.slideOutLeft > .clear,
+.chart.fadeIn > .clear {
+  z-index: 10;
+  visibility: visible;
+}
+.centerCenter,
+.chart {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   -webkit-box-pack: center;
