@@ -3,6 +3,7 @@ logs/*
 node_modules/
 bower_components/
 tmp
+_*.css
 .DS_Store
 npm-debug.log
 .idea
