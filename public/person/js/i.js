@@ -15,15 +15,17 @@ var app = angular.module('myApp', ['ngAnimate'])
 function getAbilityList() {
     if (abilityList.length > 0)return abilityList;
     abilityList = [
-        {name: 'HTML', percentage: '100%'},
-        {name: 'CSS', percentage: '100%'},
-        {name: 'JavaScript', percentage: '100%'},
-        {name: 'jQuery', percentage: '90%'},
+        {name: 'HTML', percentage: '86%'},
+        {name: 'CSS', percentage: '73%'},
+        {name: 'JavaScript', percentage: '66%'},
+        {name: 'jQuery', percentage: '70%'},
+        {name: 'MongoDB', percentage: '20%'},
+        {name: 'MySQL', percentage: '25%'},
         {name: 'Less', percentage: '75%'},
-        {name: 'AngularJS', percentage: '88%'},
-        {name: 'Bootstrap', percentage: '80%'},
-        {name: 'NodeJS', percentage: '70%'},
-        {name: 'MongoDB', percentage: '63%'}
+        {name: 'AngularJS', percentage: '66%'},
+        {name: 'Bootstrap', percentage: '60%'},
+        {name: 'java', percentage: '30%'},
+        {name: 'NodeJS', percentage: '40%'}
     ];
     return abilityList;
 }

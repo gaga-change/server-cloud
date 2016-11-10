@@ -14,6 +14,10 @@ body {
   padding-top: 20px;
 }
 
+.container{
+  transition: all 0.5s ease;
+}
+
 .container {
   min-width: 970px;
   margin-bottom: 20px;
@@ -24,8 +28,8 @@ body {
   background-color: @left-color;
   color: @left-font-color;
   padding-top: 10px;
-  height: 1080px;
-
+  //height: 1080px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -33,13 +37,13 @@ body {
   //background-color: green;
   //height: 100%;
 }
-
+/*图表*/
 .chart {
   position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
-  padding-top: 10%;
+  //padding-top: 10%;
   display: none;
   //transition: fadeInLeft 1s ease;
   &:extend(.centerCenter);
