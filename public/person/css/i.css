@@ -163,6 +163,9 @@ body {
   height: 100%;
   display: none;
 }
+.chart .chart-son {
+  width: 70%;
+}
 .chart .clear {
   position: absolute;
   top: 20px ;
@@ -177,7 +180,7 @@ body {
 .chart.fadeIn {
   display: block;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.86);
+  background-color: rgba(179, 179, 179, 0.93);
 }
 .chart.slideOutLeft > .clear,
 .chart.fadeIn > .clear {

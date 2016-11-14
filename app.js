@@ -4,6 +4,7 @@ var favicon = require('serve-favicon'); //处理图标
 var logger = require('morgan'); //显示请求
 var cookieParser = require('cookie-parser'); //coolie 的解析
 var bodyParser = require('body-parser'); //post请求体的解析
+var compression = require('compression');
 var ejs = require('ejs');
 var fs=require('fs');
 
@@ -20,7 +21,14 @@ var app = express(); //获取Application对象
 
 // console.log(app.get('config').mongo.url);
 // view engine setup
+
+// 配置中间件,开启gizp压缩
+console.log(compression);
+app.use(compression());
+
 app.set('views', path.join(__dirname, 'public'));  //设置views的路径
+
+
 app.engine('.html',ejs.renderFile); // 配置模板
 app.set('view engine', 'html');  //设置模板
 
@@ -50,6 +58,11 @@ app.use(express.static(path.join(__dirname, 'public'))); //配置静态文件路
 app.use('/', routes);  //使用routes
 app.use('/users', users);  //使用users
 app.use('/tools', tools);
+
+//其余所有get请求返回index.html给客户端
+app.get('*', function (req, res, next) {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

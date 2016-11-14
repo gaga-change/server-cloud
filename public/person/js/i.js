@@ -19,7 +19,6 @@ function getAbilityList() {
         {name: 'CSS', percentage: '73%'},
         {name: 'JavaScript', percentage: '66%'},
         {name: 'jQuery', percentage: '70%'},
-        {name: 'MongoDB', percentage: '20%'},
         {name: 'MySQL', percentage: '25%'},
         {name: 'Less', percentage: '75%'},
         {name: 'AngularJS', percentage: '66%'},
