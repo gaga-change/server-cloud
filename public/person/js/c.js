@@ -17,8 +17,7 @@ $(document).ready(function () {
         } else {
             canvasSon.width(h);
         }
-
-        console.log("h",h,"h2", canvasSon.height());
+        //console.log("h",h,"h2", canvasSon.height());
         canvasSon.css({
             marginTop: (h - canvasSon.height()) / 2 + 'px'
     })

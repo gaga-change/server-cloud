@@ -7,7 +7,14 @@ var app = angular.module('myApp', ['ngAnimate'])
         $scope.abilityList = [];
         $timeout(function () {
             $scope.$apply(function () {
-                $scope.abilityList = getAbilityList();
+                var data = getAbilityList();
+                data = data.map(function(e, i){
+                    e['percentage'] = {
+                        width: e['percentage']
+                    };
+                    return e;
+                });
+                $scope.abilityList = data;
             })
         }, 1);
     }]);
