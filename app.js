@@ -23,11 +23,9 @@ var app = express(); //获取Application对象
 // view engine setup
 
 // 配置中间件,开启gizp压缩
-console.log(compression);
 app.use(compression());
 
 app.set('views', path.join(__dirname, 'public'));  //设置views的路径
-
 
 app.engine('.html',ejs.renderFile); // 配置模板
 app.set('view engine', 'html');  //设置模板
@@ -37,16 +35,20 @@ app.use(favicon(__dirname + '/public/favicon.ico')); //配置网站的图标的�
 // ::1 - - [25/Sep/2016:08:52:55 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"
 //::1 - - [25/Sep/2016:08:50:51 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.76 Mobile Safari/537.36"
 // app.use(logger('combined'));
+
 //::1 - - [25/Sep/2016:08:52:04 +0000] "GET / HTTP/1.1" 304 -
 // app.use(logger('common'));
 
 // Sun, 25 Sep 2016 09:07:50 GMT morgan deprecated default format: use combined format at ../app.js:27:9
 //::1 - - [Sun, 25 Sep 2016 09:07:51 GMT] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.116 Safari/537.36"
 // app.use(logger('default'));
+
 // ::1 - GET / HTTP/1.1 304 - - 10.397 ms
 // app.use(logger('short'));
+
 // GET / 304 - - 10.260 ms
 //app.use(logger('tiny')); //输出请求信息
+
 // GET / 304 11.555 ms - -
  app.use(logger('dev'));
 
@@ -60,9 +62,9 @@ app.use('/users', users);  //使用users
 app.use('/tools', tools);
 
 //其余所有get请求返回index.html给客户端
-app.get('*', function (req, res, next) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+//app.get('*', function (req, res, next) {
+//  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+//});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

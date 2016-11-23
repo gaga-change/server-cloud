@@ -1,3 +1,8 @@
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 /*头*/
 img.head-pic {
   display: block;
@@ -59,11 +64,11 @@ h3 {
   padding: 10px 5px;
   margin: 10px 0;
   background-color: #fff;
-  transition: all 1s ease;
+  transition: background-color 1s ease;
   color: #222;
 }
 .ul-fa > li:hover {
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .2), -1px -1px 1px 1px rgba(0, 0, 0, .2);
   background-color: #dedede;
   color: #977e7e;
 }
