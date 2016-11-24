@@ -1,5 +1,5 @@
 @charset "UTF-8";
-footer { margin-top: 20px; }
+footer, .ad-list { margin-top: 20px; }
 
 /*结构*/
 body { background-color: #e8f7f7; }
@@ -12,12 +12,14 @@ footer { height: 50px; background-color: #13b5b1; margin-bottom: 52px; }
 /*end*/
 /*header*/
 /*end*/
-footer { margin-top: 20px; }
+footer, .ad-list { margin-top: 20px; }
 
 /*banner*/
 .banner { background: center 0 url("../img/banner.jpg"); background-size: cover; }
 
 /*end*/
+footer, .ad-list { margin-top: 20px; }
+
 /*advertisement*/
 .ad-item-1 { background-image: url("../img/ad-1"); }
 
@@ -26,6 +28,8 @@ footer { margin-top: 20px; }
 .ad-item-3 { background-image: url("../img/ad-3"); }
 
 .ad-item-4 { background-image: url("../img/ad-4"); }
+
+.ad-list li { display: block; height: 50px; border: 1px solid grey; }
 
 /*end*/
 /*教育list*/
