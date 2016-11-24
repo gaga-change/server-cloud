@@ -10,6 +10,8 @@ header { height: 140px; background-color: #fff; }
 /*header*/
 /*end*/
 /*banner*/
+.banner { background: center 0 url("../img/banner.jpg"); background-size: cover; }
+
 /*end*/
 /*advertisement*/
 /*end*/

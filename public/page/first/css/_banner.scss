@@ -1,3 +1,7 @@
+@import "variable";
 /*banner*/
-
+.banner {
+  background: center 0 url($banner-img);
+  background-size: cover;
+}
 /*end*/
