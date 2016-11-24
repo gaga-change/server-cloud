@@ -29,41 +29,42 @@ footer, .ad-list { margin-top: 20px; }
 footer, .ad-list { margin-top: 20px; }
 
 /*advertisement*/
-.ad-item-1 { background-image: url("../img/ad-1"); }
+.ad-item-1 { background: center center url("../img/ad-1.jpg") no-repeat; background-size: contain; }
 
-.ad-item-2 { background-image: url("../img/ad-2"); }
+.ad-item-2 { background: center center url("../img/ad-2.jpg") no-repeat; background-size: contain; }
 
-.ad-item-3 { background-image: url("../img/ad-3"); }
+.ad-item-3 { background: center center url("../img/ad-3.jpg") no-repeat; background-size: contain; }
 
-.ad-item-4 { background-image: url("../img/ad-4"); }
+.ad-item-4 { background: center center url("../img/ad-4.jpg") no-repeat; background-size: contain; }
 
-.ad-list li { display: block; height: 50px; border: 1px solid grey; }
+.ad-list li { display: block; height: 180px; margin-bottom: 10px; }
+.ad-list a { display: block; width: 100%; height: 100%; }
 
 /*end*/
 /*教育list*/
-.chu-item-1 { background-image: url("../img/chu/chu-1"); }
+.chu-item-1 { background-image: url("../img/chu/chu-1.jpg"); }
 
-.chu-item-2 { background-image: url("../img/chu/chu-2"); }
+.chu-item-2 { background-image: url("../img/chu/chu-2.jpg"); }
 
-.chu-item-3 { background-image: url("../img/chu/chu-3"); }
+.chu-item-3 { background-image: url("../img/chu/chu-3.jpg"); }
 
-.chu-item-4 { background-image: url("../img/chu/chu-4"); }
+.chu-item-4 { background-image: url("../img/chu/chu-4.jpg"); }
 
-.chu-item-5 { background-image: url("../img/chu/chu-5"); }
+.chu-item-5 { background-image: url("../img/chu/chu-5.jpg"); }
 
-.chu-item-6 { background-image: url("../img/chu/chu-6"); }
+.chu-item-6 { background-image: url("../img/chu/chu-6.jpg"); }
 
-.gao-item-1 { background-image: url("../img/gao/gao-1"); }
+.gao-item-1 { background-image: url("../img/gao/gao-1.jpg"); }
 
-.gao-item-2 { background-image: url("../img/gao/gao-2"); }
+.gao-item-2 { background-image: url("../img/gao/gao-2.jpg"); }
 
-.gao-item-3 { background-image: url("../img/gao/gao-3"); }
+.gao-item-3 { background-image: url("../img/gao/gao-3.jpg"); }
 
-.gao-item-4 { background-image: url("../img/gao/gao-4"); }
+.gao-item-4 { background-image: url("../img/gao/gao-4.jpg"); }
 
-.gao-item-5 { background-image: url("../img/gao/gao-5"); }
+.gao-item-5 { background-image: url("../img/gao/gao-5.jpg"); }
 
-.gao-item-6 { background-image: url("../img/gao/gao-6"); }
+.gao-item-6 { background-image: url("../img/gao/gao-6.jpg"); }
 
 /*end*/
 /*页脚*/

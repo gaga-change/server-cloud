@@ -2,12 +2,12 @@
 
 @for $i from 1 through 6 {
   .chu-item-#{$i} {
-    background-image: url("../img/chu/chu-#{$i}");
+    background-image: url("../img/chu/chu-#{$i}.jpg");
   }
 }
 @for $i from 1 through 6 {
   .gao-item-#{$i} {
-    background-image: url("../img/gao/gao-#{$i}");
+    background-image: url("../img/gao/gao-#{$i}.jpg");
   }
 }
 
