@@ -9,10 +9,15 @@ $banner-h: 380px;
 $banner-img: "../img/banner.jpg";
 
 $footer-h: 50px;
-$footer-c: #13b5b1;
+$footer-b: #13b5b1;
+$footer-margin-bottom: 52px;
 
-$padding-top: 20px;
+$margin-top: 20px;
 
+
+%margin-top{
+  margin-top: $margin-top;
+}
 
 
 

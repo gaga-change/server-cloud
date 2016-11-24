@@ -26,7 +26,10 @@ body {
     }
   }
   @at-root footer {
-
+    height: $footer-h;
+    background-color: $footer-b;
+    margin-bottom: $footer-margin-bottom;
+    @extend %margin-top;
   }
 }
 
