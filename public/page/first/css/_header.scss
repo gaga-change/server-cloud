@@ -12,16 +12,12 @@ header {
     line-height: $header-top-h;
     color: $header-top-l-c;
   }
-  ul {
-  }
-  li {
-  }
   li:last-of-type a {
     color: $header-top-r-c;
   }
   .border-r a {
     padding-right: 10px;
-    border-right: 1px solid $grey;
+    border-right: 1px solid $white;
   }
 }
 

@@ -37,6 +37,8 @@
     height: 100%;
     width: 100%;
     line-height: $edu-item-h;
+    color: $black;
+    text-decoration: none;
     //border: 1px solid red;
   }
   span {
@@ -48,13 +50,4 @@
     //border: 1px solid red;
   }
 }
-.edu-gao {
-  li {
-
-  }
-  a {
-
-  }
-}
-
 /*end*/

@@ -6,8 +6,12 @@
       height: 100%;
       line-height: $footer-h;
       a {
-        border-right: 1px grey solid;
+        border-right: 1px $white solid;
         padding-right: 10px;
+        color: $white;
+      }
+      li.active a {
+        color: $yellow;
       }
       li:last-of-type a{
         border-right: none;

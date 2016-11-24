@@ -16,7 +16,7 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 .header-top ul, .header-top li { height: 100%; }
 .header-top li, .header-top a { line-height: 40px; color: #fff; }
 .header-top li:last-of-type a { color: #fffe9d; }
-.header-top .border-r a { padding-right: 10px; border-right: 1px solid grey; }
+.header-top .border-r a { padding-right: 10px; border-right: 1px solid #fff; }
 
 .header-bot ul, .header-bot li, .header-bot a { height: 100%; }
 .header-bot li, .header-bot a { line-height: 100px; font-size: 16px; color: #222; }
@@ -27,7 +27,7 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*banner*/
-.banner { background: center 0 url("../img/banner.jpg"); background-size: cover; }
+.banner { background: center 0 url("../img/banner.jpg"); background-size: cover; cursor: pointer; }
 
 /*end*/
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
@@ -76,7 +76,7 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 .educate .chu h3, .educate .gao h3 { font-weight: 800; color: #1cb387; }
 
 .edu-chu li, .edu-gao li { border: 1px solid #e5e5e5; height: 80px; margin-bottom: 4px; width: 180px; }
-.edu-chu a, .edu-gao a { display: block; height: 100%; width: 100%; line-height: 80px; }
+.edu-chu a, .edu-gao a { display: block; height: 100%; width: 100%; line-height: 80px; color: #222; text-decoration: none; }
 .edu-chu span, .edu-gao span { display: block; float: left; width: 60px; height: 100%; margin-right: 10px; }
 
 /*end*/
@@ -84,7 +84,8 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*页脚*/
 footer ul { height: 100%; line-height: 50px; }
-footer ul a { border-right: 1px grey solid; padding-right: 10px; }
+footer ul a { border-right: 1px #fff solid; padding-right: 10px; color: #fff; }
+footer ul li.active a { color: #fffe9d; }
 footer ul li:last-of-type a { border-right: none; }
 
 /*end*/
