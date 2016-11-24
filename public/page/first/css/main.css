@@ -79,6 +79,7 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 .educate .chu h3, .educate .gao h3 { font-weight: 800; color: #1cb387; }
 
 .edu-chu li, .edu-gao li { border: 1px solid #e5e5e5; height: 80px; margin-bottom: 4px; width: 180px; }
+.edu-chu li:hover, .edu-gao li:hover { box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2); }
 .edu-chu a, .edu-gao a { display: block; height: 100%; width: 100%; line-height: 80px; color: #222; text-decoration: none; }
 .edu-chu span, .edu-gao span { display: block; float: left; width: 60px; height: 100%; margin-right: 10px; }
 

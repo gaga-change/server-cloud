@@ -32,6 +32,9 @@
     margin-bottom: 4px;
     width: 180px;
   }
+  li:hover {
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+  }
   a {
     display: block;
     height: 100%;
