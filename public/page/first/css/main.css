@@ -27,7 +27,7 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*banner*/
-.banner { background: center 0 url("../img/banner.jpg"); background-size: cover; cursor: pointer; }
+.banner { background: center 0 url("../img/banner.jpg") no-repeat; background-size: cover; cursor: pointer; }
 
 /*end*/
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }

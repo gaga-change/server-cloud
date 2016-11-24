@@ -1,7 +1,7 @@
 @import "variable";
 /*banner*/
 .banner {
-  background: center 0 url($banner-img);
+  background: center 0 url($banner-img) no-repeat;
   background-size: cover;
   cursor: pointer;
 }
