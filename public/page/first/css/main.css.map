@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AAEA,MAAM;AACN,IAAK,GACH,gBAAgB,ECJT,OAAO;ADKL,MAAO,GACd,MAAM,EAAE,KAA6B,EACrC,gBAAgB,ECLT,IAAI;ADMF,WAAY,GACnB,MAAM,ECNG,IAAI,EDOb,gBAAgB,ECNP,OAAO;ADQT,WAAY,GACnB,MAAM,ECRG,KAAK;ADYP,OAAQ,GACf,MAAM,ECXD,KAAK;;ADyBhB,OAAO;AEhCP,UAAU;AAEV,OAAO;ACFP,UAAU;AAEV,OAAO;ACFP,iBAAiB;AAEjB,OAAO;ACFP,UAAU;AAEV,OAAO;ACFP,MAAM;AAEN,OAAO",
+"sources": ["main.scss","_variable.scss","_header.scss","_banner.scss","_ad.scss","_list.scss","_footer.scss"],
+"names": [],
+"file": "main.css"
+}

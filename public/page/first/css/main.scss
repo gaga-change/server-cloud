@@ -1,0 +1,39 @@
+@import "variable";
+
+/*结构*/
+body {
+  background-color: $body-b;
+  @at-root header {
+    height: $header-top-h + $header-bot-h;
+    background-color: $header-b;
+    @at-root .header-top {
+      height: $header-top-h;
+      background-color: $header-top-b;
+    }
+    @at-root .header-bot {
+      height: $header-bot-h;
+    }
+  }
+  @at-root .content {
+    @at-root .banner {
+      height: $banner-h;
+    }
+    @at-root .ad {
+
+    }
+    @at-root .educate {
+
+    }
+  }
+  @at-root footer {
+
+  }
+}
+
+/*end*/
+
+@import "header";
+@import "banner";
+@import "ad";
+@import "list";
+@import "footer";
