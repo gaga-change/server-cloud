@@ -13,8 +13,10 @@ footer { height: 50px; background-color: #13b5b1; margin-bottom: 52px; }
 /*header*/
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
-.header-top ul, .header-top li, .header-top a { height: 100%; }
-.header-top li, .header-top a { line-height: 40px; }
+.header-top ul, .header-top li { height: 100%; }
+.header-top li, .header-top a { line-height: 40px; color: #fff; }
+.header-top li:last-of-type a { color: #fffe9d; }
+.header-top .border-r a { padding-right: 10px; border-right: 1px solid grey; }
 
 .header-bot ul, .header-bot li, .header-bot a { height: 100%; }
 .header-bot li, .header-bot a { line-height: 100px; }

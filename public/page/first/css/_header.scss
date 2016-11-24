@@ -5,18 +5,23 @@ header {
 
 @import "variable";
 .header-top {
-  ul, li, a {
-    //border: 1px solid red;
+  ul, li {
     height: 100%;
   }
   li, a {
     line-height: $header-top-h;
+    color: $header-top-l-c;
   }
   ul {
   }
   li {
   }
-  a {
+  li:last-of-type a {
+    color: $header-top-r-c;
+  }
+  .border-r a {
+    padding-right: 10px;
+    border-right: 1px solid $grey;
   }
 }
 
