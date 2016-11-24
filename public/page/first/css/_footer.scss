@@ -1,3 +1,17 @@
+@import "variable";
 /*页脚*/
-
+  footer {
+    ul {
+      //border: 1px solid red;
+      height: 100%;
+      line-height: $footer-h;
+      a {
+        border-right: 1px grey solid;
+        padding-right: 10px;
+      }
+      li:last-of-type a{
+        border-right: none;
+      }
+    }
+  }
 /*end*/

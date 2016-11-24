@@ -76,7 +76,13 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 .edu-chu span, .edu-gao span { display: block; float: left; width: 60px; height: 100%; margin-right: 10px; }
 
 /*end*/
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
+
 /*页脚*/
+footer ul { height: 100%; line-height: 50px; }
+footer ul a { border-right: 1px grey solid; padding-right: 10px; }
+footer ul li:last-of-type a { border-right: none; }
+
 /*end*/
 
 /*# sourceMappingURL=main.css.map */
