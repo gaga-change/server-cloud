@@ -1,5 +1,5 @@
 @charset "UTF-8";
-footer, .ad-list { margin-top: 20px; }
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*结构*/
 body { background-color: #e8f7f7; }
@@ -11,7 +11,7 @@ footer { height: 50px; background-color: #13b5b1; margin-bottom: 52px; }
 
 /*end*/
 /*header*/
-footer, .ad-list { margin-top: 20px; }
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 .header-top ul, .header-top li, .header-top a { height: 100%; }
 .header-top li, .header-top a { line-height: 40px; }
@@ -20,13 +20,13 @@ footer, .ad-list { margin-top: 20px; }
 .header-bot li, .header-bot a { line-height: 100px; }
 
 /*end*/
-footer, .ad-list { margin-top: 20px; }
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*banner*/
 .banner { background: center 0 url("../img/banner.jpg"); background-size: cover; }
 
 /*end*/
-footer, .ad-list { margin-top: 20px; }
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*advertisement*/
 .ad-item-1 { background: center center url("../img/ad-1.jpg") no-repeat; background-size: contain; }
@@ -41,30 +41,39 @@ footer, .ad-list { margin-top: 20px; }
 .ad-list a { display: block; width: 100%; height: 100%; }
 
 /*end*/
+footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
+
 /*教育list*/
-.chu-item-1 { background-image: url("../img/chu/chu-1.jpg"); }
+.chu-item-1 { background: center center url("../img/chu/chu-1.jpg") no-repeat; background-size: contain; }
 
-.chu-item-2 { background-image: url("../img/chu/chu-2.jpg"); }
+.chu-item-2 { background: center center url("../img/chu/chu-2.jpg") no-repeat; background-size: contain; }
 
-.chu-item-3 { background-image: url("../img/chu/chu-3.jpg"); }
+.chu-item-3 { background: center center url("../img/chu/chu-3.jpg") no-repeat; background-size: contain; }
 
-.chu-item-4 { background-image: url("../img/chu/chu-4.jpg"); }
+.chu-item-4 { background: center center url("../img/chu/chu-4.jpg") no-repeat; background-size: contain; }
 
-.chu-item-5 { background-image: url("../img/chu/chu-5.jpg"); }
+.chu-item-5 { background: center center url("../img/chu/chu-5.jpg") no-repeat; background-size: contain; }
 
-.chu-item-6 { background-image: url("../img/chu/chu-6.jpg"); }
+.chu-item-6 { background: center center url("../img/chu/chu-6.jpg") no-repeat; background-size: contain; }
 
-.gao-item-1 { background-image: url("../img/gao/gao-1.jpg"); }
+.gao-item-1 { background: center center url("../img/gao/gao-1.jpg") no-repeat; background-size: contain; }
 
-.gao-item-2 { background-image: url("../img/gao/gao-2.jpg"); }
+.gao-item-2 { background: center center url("../img/gao/gao-2.jpg") no-repeat; background-size: contain; }
 
-.gao-item-3 { background-image: url("../img/gao/gao-3.jpg"); }
+.gao-item-3 { background: center center url("../img/gao/gao-3.jpg") no-repeat; background-size: contain; }
 
-.gao-item-4 { background-image: url("../img/gao/gao-4.jpg"); }
+.gao-item-4 { background: center center url("../img/gao/gao-4.jpg") no-repeat; background-size: contain; }
 
-.gao-item-5 { background-image: url("../img/gao/gao-5.jpg"); }
+.gao-item-5 { background: center center url("../img/gao/gao-5.jpg") no-repeat; background-size: contain; }
 
-.gao-item-6 { background-image: url("../img/gao/gao-6.jpg"); }
+.gao-item-6 { background: center center url("../img/gao/gao-6.jpg") no-repeat; background-size: contain; }
+
+.educate .chu, .educate .gao { background-color: #fff; }
+.educate .chu h3, .educate .gao h3 { font-weight: 800; color: #1cb387; }
+
+.edu-chu li, .edu-gao li { border: 1px solid #e5e5e5; height: 80px; margin-bottom: 4px; width: 180px; }
+.edu-chu a, .edu-gao a { display: block; height: 100%; width: 100%; line-height: 80px; }
+.edu-chu span, .edu-gao span { display: block; float: left; width: 60px; height: 100%; margin-right: 10px; }
 
 /*end*/
 /*页脚*/

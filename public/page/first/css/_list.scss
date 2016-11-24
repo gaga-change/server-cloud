@@ -1,22 +1,51 @@
+@import "variable";
 /*教育list*/
 
 @for $i from 1 through 6 {
   .chu-item-#{$i} {
-    background-image: url("../img/chu/chu-#{$i}.jpg");
+    background: center center url("../img/chu/chu-#{$i}.jpg") no-repeat;
+    background-size: contain;
   }
 }
 @for $i from 1 through 6 {
   .gao-item-#{$i} {
-    background-image: url("../img/gao/gao-#{$i}.jpg");
+    background: center center url("../img/gao/gao-#{$i}.jpg") no-repeat;
+    background-size: contain;
+  }
+}
+.educate {
+  .chu, .gao {
+    background-color: $educate-b;
+    @extend %margin-top;
+    h3 {
+      font-weight: 800;
+      color: $educate-h3-c;
+    }
   }
 }
 
-.edu-chu {
-  li {
+.edu-chu, .edu-gao {
 
+  li {
+    border: 1px solid $educate-border-c;
+    height: $edu-item-h;
+    margin-bottom: 4px;
+    width: 180px;
   }
   a {
-
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: $edu-item-h;
+    //border: 1px solid red;
+  }
+  span {
+    display: block;
+    float: left;
+    width: 60px;
+    height: 100%;
+    margin-right: 10px;
+    //border: 1px solid red;
   }
 }
 .edu-gao {
