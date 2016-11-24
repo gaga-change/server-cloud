@@ -1,6 +1,13 @@
 @import "variable";
 
 /*结构*/
+.wow {
+  display: none;
+  &.wow-show{
+    display: block;
+  }
+}
+
 body {
   background-color: $body-b;
   @at-root header {
@@ -32,7 +39,6 @@ body {
     @extend %margin-top;
   }
 }
-
 /*end*/
 
 @import "header";

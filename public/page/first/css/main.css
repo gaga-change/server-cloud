@@ -2,6 +2,9 @@
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 
 /*结构*/
+.wow { display: none; }
+.wow.wow-show { display: block; }
+
 body { background-color: #e8f7f7; }
 header { height: 140px; background-color: #fff; }
 .header-top { height: 40px; background-color: #13b5b1; }

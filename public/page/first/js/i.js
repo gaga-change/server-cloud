@@ -8,3 +8,9 @@ $(window).on('scroll', function (e) {
 
     }
 });
+//
+$(document).ready(function() {
+    $(".edu-chu a, .edu-gao a").addClass('wow bounceIn');
+    $('.wow').addClass("wow-show");
+    new WOW().init();
+});
