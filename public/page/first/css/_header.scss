@@ -6,7 +6,7 @@ header {
 @import "variable";
 .header-top {
   ul, li, a {
-    border: 1px solid red;
+    //border: 1px solid red;
     height: 100%;
   }
   li, a {
@@ -21,6 +21,13 @@ header {
 }
 
 .header-bot {
+  ul, li, a {
+    //border: 1px solid red;
+    height: 100%;
+  }
+  li, a {
+    line-height: $header-bot-h;
+  }
   img.logo {
 
   }

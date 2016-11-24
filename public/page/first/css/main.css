@@ -13,8 +13,11 @@ footer { height: 50px; background-color: #13b5b1; margin-bottom: 52px; }
 /*header*/
 footer, .ad-list { margin-top: 20px; }
 
-.header-top ul, .header-top li, .header-top a { border: 1px solid red; height: 100%; }
+.header-top ul, .header-top li, .header-top a { height: 100%; }
 .header-top li, .header-top a { line-height: 40px; }
+
+.header-bot ul, .header-bot li, .header-bot a { height: 100%; }
+.header-bot li, .header-bot a { line-height: 100px; }
 
 /*end*/
 footer, .ad-list { margin-top: 20px; }
