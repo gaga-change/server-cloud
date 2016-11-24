@@ -7,9 +7,9 @@
     display: block;
   }
 }
-
 body {
   background-color: $body-b;
+  min-width: 572px;
   @at-root header {
     height: $header-top-h + $header-bot-h;
     background-color: $header-b;
