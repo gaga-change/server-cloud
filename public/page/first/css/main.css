@@ -14,8 +14,40 @@ header { height: 140px; background-color: #fff; }
 
 /*end*/
 /*advertisement*/
+.ad-item-1 { background-image: url("../img/ad-1"); }
+
+.ad-item-2 { background-image: url("../img/ad-2"); }
+
+.ad-item-3 { background-image: url("../img/ad-3"); }
+
+.ad-item-4 { background-image: url("../img/ad-4"); }
+
 /*end*/
 /*教育list*/
+.chu-item-1 { background-image: url("../img/chu/chu-1"); }
+
+.chu-item-2 { background-image: url("../img/chu/chu-2"); }
+
+.chu-item-3 { background-image: url("../img/chu/chu-3"); }
+
+.chu-item-4 { background-image: url("../img/chu/chu-4"); }
+
+.chu-item-5 { background-image: url("../img/chu/chu-5"); }
+
+.chu-item-6 { background-image: url("../img/chu/chu-6"); }
+
+.gao-item-1 { background-image: url("../img/gao/gao-1"); }
+
+.gao-item-2 { background-image: url("../img/gao/gao-2"); }
+
+.gao-item-3 { background-image: url("../img/gao/gao-3"); }
+
+.gao-item-4 { background-image: url("../img/gao/gao-4"); }
+
+.gao-item-5 { background-image: url("../img/gao/gao-5"); }
+
+.gao-item-6 { background-image: url("../img/gao/gao-6"); }
+
 /*end*/
 /*页脚*/
 /*end*/

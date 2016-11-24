@@ -1,3 +1,15 @@
 /*教育list*/
 
+@for $i from 1 through 6 {
+  .chu-item-#{$i} {
+    background-image: url("../img/chu/chu-#{$i}");
+  }
+}
+@for $i from 1 through 6 {
+  .gao-item-#{$i} {
+    background-image: url("../img/gao/gao-#{$i}");
+  }
+}
+
+
 /*end*/

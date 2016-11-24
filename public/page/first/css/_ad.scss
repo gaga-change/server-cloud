@@ -1,3 +1,9 @@
 /*advertisement*/
 
+@for $i from 1 through 4 {
+  .ad-item-#{$i} {
+    background-image: url("../img/ad-#{$i}");
+  }
+}
+
 /*end*/
