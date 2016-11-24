@@ -1,3 +1,38 @@
 /*header*/
+header {
+
+}
+
+@import "variable";
+.header-top {
+  ul, li, a {
+    border: 1px solid red;
+    height: 100%;
+  }
+  li, a {
+    line-height: $header-top-h;
+  }
+  ul {
+  }
+  li {
+  }
+  a {
+  }
+}
+
+.header-bot {
+  img.logo {
+
+  }
+  ul {
+
+  }
+  li {
+
+  }
+  a {
+
+  }
+}
 
 /*end*/
