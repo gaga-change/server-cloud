@@ -19,7 +19,9 @@ footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }
 .header-top .border-r a { padding-right: 10px; border-right: 1px solid grey; }
 
 .header-bot ul, .header-bot li, .header-bot a { height: 100%; }
-.header-bot li, .header-bot a { line-height: 100px; }
+.header-bot li, .header-bot a { line-height: 100px; font-size: 16px; color: #222; }
+.header-bot li { margin-left: 20px; }
+.header-bot a:hover { text-decoration: none; }
 
 /*end*/
 footer, .ad-list, .educate .chu, .educate .gao { margin-top: 20px; }

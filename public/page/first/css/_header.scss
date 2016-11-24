@@ -32,18 +32,14 @@ header {
   }
   li, a {
     line-height: $header-bot-h;
+    font-size: 16px;
+    color: $black;
   }
-  img.logo {
-
+  li{
+    margin-left: 20px;
   }
-  ul {
-
-  }
-  li {
-
-  }
-  a {
-
+  a:hover {
+    text-decoration: none;
   }
 }
 
