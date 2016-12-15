@@ -9,7 +9,7 @@
 // Reset and dependencies
 @import "bootstrap/normalize";  //normalize 重置样式
 //@import "bootstrap/print";   //打印
-//@import "bootstrap/glyphicons"; //图标字库
+@import "bootstrap/glyphicons"; //图标字库
 
 // Core CSS
 @import "bootstrap/scaffolding";  //脚手架
