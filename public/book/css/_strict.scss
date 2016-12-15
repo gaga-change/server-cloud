@@ -1,0 +1,40 @@
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+.m-left {
+  @extend .row;
+  width: 220px;
+  background-color: $btn-warning-bg;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.m-right {
+  margin-right: -15px;
+  margin-left: 205px;
+  height: 500px;
+  background-color: $btn-primary-bg;
+}
+
+@media (max-width: $screen-xs-max) {
+  .m-left {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    z-index: 10;
+  }
+  .m-right {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 40px;
+    height: 500px;
+    background-color: $btn-primary-bg;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+}
+
+@media (min-width: $screen-lg-min) {
+}
