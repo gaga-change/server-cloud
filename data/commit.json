@@ -1,7 +1,11 @@
 {
-  "id": "1",
-  "document": "1",
-  "master_user": "1",
-  "back_user": "null",
-  "content": "你是傻逼吗？"
+  "list": [
+    {
+      "id": "1",
+      "document_id": "1",
+      "master_user_id": "1",
+      "back_user_id": "null",
+      "content": "你是傻逼吗？"
+    }
+  ]
 }
