@@ -1,25 +1,42 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
-
+@import "my/class";
 .m-left {
   @extend .row;
   background-color: $btn-warning-bg;
   position: absolute;
+  //transition: all 1s ease;
+  @extend %transition;
+
+  left: 15px;
 }
+
 .m-right {
   height: 500px;
+  //transition: all 1s ease;
+  @extend %transition;
   background-color: $btn-primary-bg;
 }
+
 .top {
-  display: none;
+  position: fixed;
+  top: 0;
+  height: 0;
+  width: 100%;
   overflow: hidden;
+  //transition: all 1s ease;
+  @extend %transition;
+  background-color: $brand-info;
 }
 
 //小屏幕  屏幕 < xs-max 的时候
 @media (max-width: $screen-xs-max) {
   .m-left {
-    width: 0;
-    height: 0;
+    position: absolute;
+    width: 180px;
+    top: 0;
+    bottom: 0;
+    left: -180px;
     overflow: hidden;
     z-index: 10;
   }
@@ -29,15 +46,10 @@
     margin-top: 40px;
   }
   .top {
-    display: block;
-    position: fixed;
-    width: 100%;
-    top: 0;
     height: 40px;
-    overflow: hidden;
-    background-color: $brand-info;
   }
 }
+
 //中屏幕  屏幕 < sm-max
 @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
   .m-left {
