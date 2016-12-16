@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-cmn-Hans">
+<html lang="zh-cmn-Hans" ng-app="Book">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,7 +10,7 @@
     maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="/book/css/main.css">
 </head>
-<body>
+<body ng-controller="MainCtrl">
 <!--[if lt IE 8]>
 <p class="browserupgrade">
     您使用IE浏览器版本 <strong>过低</strong> 。
@@ -29,18 +29,24 @@
 <!--小屏幕top区-->
 <div class="container-fluid top">
     <!--三横线-->
-    <div>
+    <button class="" type="button" ng-click="showMenu()">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-    </div>
+    </button>
     <h3>无止境的前端</h3>
     <span>严俊东</span>
 </div>
 <!--总内容-->
 <div class="container-fluid">
+
     <!--左边菜单-->
-    <div class="m-left">
+    <div class="m-left" id="leftMenu">
+        <button class="" type="button" ng-click="hideMenu()">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
         <h3>俊东的博客</h3>
         <blockquote>无止境的前端~</blockquote>
         <img class="img-responsive" src="/book/img/head.jpg" alt="严俊东">
@@ -71,7 +77,9 @@
 </div>
 
 </body>
+<script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/angular/angular.min.js"></script>
 <script src="/lib/angular/angular-animate.min.js"></script>
 <script src="/lib/angular/angular-ui-router.min.js"></script>
+<script src="/book/js/main.js"></script>
 </html>

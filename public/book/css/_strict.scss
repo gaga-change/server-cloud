@@ -7,7 +7,6 @@
   position: absolute;
   //transition: all 1s ease;
   @extend %transition;
-
   left: 15px;
 }
 
@@ -32,13 +31,15 @@
 //小屏幕  屏幕 < xs-max 的时候
 @media (max-width: $screen-xs-max) {
   .m-left {
-    position: absolute;
     width: 180px;
     top: 0;
     bottom: 0;
     left: -180px;
     overflow: hidden;
     z-index: 10;
+  }
+  .m-left.show{
+    left: 15px;
   }
   .m-right {
     margin-left: -15px;

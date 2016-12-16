@@ -3231,13 +3231,14 @@ input[type="button"].btn-block {
 
 @media (max-width: 767px) {
   .m-left {
-    position: absolute;
     width: 180px;
     top: 0;
     bottom: 0;
     left: -180px;
     overflow: hidden;
     z-index: 10; }
+  .m-left.show {
+    left: 15px; }
   .m-right {
     margin-left: -15px;
     margin-right: -15px;
