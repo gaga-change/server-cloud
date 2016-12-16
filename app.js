@@ -24,7 +24,13 @@ var app = express(); //获取Application对象
 
 // 配置中间件,开启gizp压缩
 app.use(compression());
-
+console.log(__dirname);
+app.use(require('node-sass-middleware')({
+  src: path.join(__dirname, 'public'),
+  dest: path.join(__dirname, 'public'),
+  indentedSyntax: false,
+  sourceMap: true
+}));
 app.set('views', path.join(__dirname, 'public'));  //设置views的路径
 
 app.engine('.html',ejs.renderFile); // 配置模板
