@@ -4,10 +4,19 @@
 .m-left {
   @extend .row;
   background-color: $btn-warning-bg;
-  position: absolute;
+  position: fixed;
   //transition: all 1s ease;
+  overflow: hidden;
   @extend %transition;
   left: 15px;
+  .menu {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    //overflow-x:
+    padding-right: 30px;
+  }
 }
 
 .m-right {
@@ -35,7 +44,6 @@
     top: 0;
     bottom: 0;
     left: -180px;
-    overflow: hidden;
     z-index: 10;
   }
   .m-left.show{

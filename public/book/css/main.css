@@ -3214,8 +3214,15 @@ input[type="button"].btn-block {
 
 .m-left {
   background-color: #f0ad4e;
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   left: 15px; }
+  .m-left .menu {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 30px; }
 
 .m-right {
   height: 500px;
@@ -3235,7 +3242,6 @@ input[type="button"].btn-block {
     top: 0;
     bottom: 0;
     left: -180px;
-    overflow: hidden;
     z-index: 10; }
   .m-left.show {
     left: 15px; }
