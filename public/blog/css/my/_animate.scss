@@ -47,3 +47,18 @@
   //display: block;
   //transition-delay: 300ms;
 //}
+
+.slide-animate {
+  position: relative;
+  overflow: hidden;
+}
+.slide-animate.ng-enter {
+  position: absolute;
+  width: 100%;
+  animation: fadeInLeft 0.5s ease ;
+}
+.slide-animate.ng-leave {
+  position: absolute;
+  width: 100%;
+  animation: fadeOutRight 0.5s ease ;
+}

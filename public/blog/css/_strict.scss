@@ -18,6 +18,7 @@
   overflow: hidden;
   @extend %transition;
   left: 15px;
+  z-index: 10;
 }
 
 
@@ -26,6 +27,7 @@
   //transition: all 1s ease;
   @extend %transition;
   //background-color: $btn-primary-bg;
+  overflow: hidden;
 }
 
 .top {
