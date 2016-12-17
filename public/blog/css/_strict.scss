@@ -6,9 +6,12 @@
 @import "my/animate";
 .m-left {
   @extend .row;
-  //background-color: $btn-warning-bg;
+  .content {
+    @extend %transition;
+  }
+  background-color: $alert-warning-border;
   //background: url("../img/bg.jpg") no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: fixed;
   //transition: all 1s ease;
   overflow: hidden;
@@ -39,6 +42,9 @@
 @media (max-width: $screen-xs-max) {
   .m-left {
     width: 180px;
+    .content{
+      width: 180px;
+    }
     top: 0;
     bottom: 0;
     left: -180px;
@@ -61,6 +67,9 @@
 @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
   .m-left {
     width: 180px;
+    .content{
+      width: 180px;
+    }
     top: 0;
     bottom: 0;
   }
@@ -74,6 +83,9 @@
 @media (min-width: $screen-sm-max) {
   .m-left {
     width: 220px;
+    .content{
+      width: 220px;
+    }
     top: 0;
     bottom: 0;
   }
