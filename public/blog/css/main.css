@@ -1291,7 +1291,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled, .list-menu, .son-list-menu {
+.list-unstyled, .list-menu, .menu-move {
   padding-left: 0;
   list-style: none; }
 
@@ -3238,6 +3238,9 @@ input[type="button"].btn-block {
     -webkit-transition-property: top, right, bottom, left;
     transition-property: top, right, bottom, left; }
 
+.my-class {
+  transition: all 1s ease; }
+
 .list-menu {
   margin-top: 40px; }
   .list-menu > li {
@@ -3245,13 +3248,6 @@ input[type="button"].btn-block {
   .list-menu a {
     text-decoration: none;
     cursor: pointer; }
-
-.son-list-menu {
-  display: none; }
-  .son-list-menu.show {
-    display: block; }
-  .son-list-menu li {
-    padding: 5px 0; }
 
 .menu {
   box-sizing: content-box;
@@ -3317,6 +3313,39 @@ input[type="button"].btn-block {
   border-left: 4px solid transparent; }
   .caret.up {
     transform: rotate(180deg); }
+
+/*从高度为0开始 变为高度*/
+.menu-move > li {
+  display: block;
+  height: 30px;
+  overflow: hidden;
+  padding: 5px 0; }
+
+.menu-move.ng-enter {
+  display: block;
+  overflow: hidden;
+  transition: all .5s ease; }
+  .menu-move.ng-enter li {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s ease; }
+
+.menu-move.ng-leave {
+  display: block;
+  overflow: hidden;
+  transition: all .5s ease; }
+  .menu-move.ng-leave > li {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 0;
+    transition: all .5s ease; }
+
+.menu-move.ng-enter-active > li {
+  height: 30px;
+  padding: 5px 0; }
 
 .m-left {
   background-size: cover;

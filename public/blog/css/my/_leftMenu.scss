@@ -1,3 +1,6 @@
+.my-class {
+  transition: all 1s ease;
+}
 
 .list-menu {
   margin-top: 40px;
@@ -13,16 +16,6 @@
   }
 }
 
-.son-list-menu {
-  @extend .list-unstyled;
-  display: none;
-  &.show {
-    display: block;
-  }
-  li {
-    padding: 5px 0;
-  }
-}
 
 .menu {
   .content {
