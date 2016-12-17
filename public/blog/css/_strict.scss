@@ -5,6 +5,7 @@
 @import "my/pt";
 @import "my/animate";
 @import "my/top";
+@import "my/firstPage";
 .m-left {
   @extend .row;
   .content {
@@ -23,11 +24,12 @@
 
 
 .m-right {
-  height: 500px;
+  //height: 500px;
   //transition: all 1s ease;
   @extend %transition;
   //background-color: $btn-primary-bg;
-  overflow: hidden;
+  //overflow: hidden;
+  //padding: 0 15px;
 }
 
 .top {

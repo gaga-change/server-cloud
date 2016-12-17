@@ -9,7 +9,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         url: "/index",
         views: {
             content: {
-                templateUrl: "blog/component/test.html"
+                templateUrl: "blog/component/first.html"
             }
         }
     });
