@@ -2,10 +2,9 @@
 .list-menu {
   margin-top: 40px;
   @extend .list-unstyled;
-  //background-color: greenyellow;
   & > li {
     @extend .text-center;
-    //border: 1px solid red;
+    @extend %hvr-outline-in;
     padding: 10px 0;
   }
   a {
@@ -28,6 +27,7 @@
 .menu {
   .content {
     margin-right: -15px;
+    overflow: hidden;
   }
   box-sizing: content-box;
   width: 100%;
