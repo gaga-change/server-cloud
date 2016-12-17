@@ -3273,7 +3273,7 @@ input[type="button"].btn-block {
   border: none;
   float: right; }
   .go-left span {
-    color: #7FDBFF; }
+    color: #5e99b5; }
 
 .my-class {
   transition: all 1s ease; }
@@ -3419,8 +3419,7 @@ input[type="button"].btn-block {
   left: 15px; }
 
 .m-right {
-  height: 500px;
-  background-color: #337ab7; }
+  height: 500px; }
 
 .top {
   position: fixed;
@@ -3428,7 +3427,7 @@ input[type="button"].btn-block {
   height: 0;
   width: 100%;
   overflow: hidden;
-  background-color: #5bc0de; }
+  background-color: rgba(250, 235, 204, 0.53); }
 
 @media (max-width: 767px) {
   .m-left {
