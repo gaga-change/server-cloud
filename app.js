@@ -66,6 +66,7 @@ app.use(express.static(path.join(__dirname, 'public'))); //配置静态文件路
 app.use('/', routes);  //使用routes
 app.use('/users', users);  //使用users
 app.use('/tools', tools);
+app.use('/data', require('./routes/data'));
 
 //其余所有get请求返回index.html给客户端
 //app.get('*', function (req, res, next) {

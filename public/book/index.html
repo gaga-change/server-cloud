@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-cmn-Hans" ng-app="Book">
+<html lang="zh-cmn-Hans" ng-app="Blog">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -39,27 +39,27 @@
 </div>
 <!--总内容-->
 <div class="container-fluid">
-
     <!--左边菜单-->
     <div class="m-left" id="leftMenu">
         <div class="menu">
             <div class="content">
-                <button class="" type="button" ng-click="hideMenu()">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button class="go-left visible-xs-block" type="button" ng-click="hideMenu()">
+                   撤回
                 </button>
-                <h3 class="text-center">俊东的博客</h3>
-                <blockquote>无止境的前端~</blockquote>
-                <img class="img-responsive" src="/book/img/head.jpg" alt="严俊东">
-                <p>
+                <h3 class="text-hide">俊东的博客</h3>
+                <blockquote class="blockquote-reverse">无止境的前端~</blockquote>
+                <img class="img-responsive img-circle center-block" src="/book/img/head.jpg" alt="严俊东">
+                <p class="text-center">
                     <span class="name">严俊东</span><span class="job">前端工程师</span>
                 </p>
-                <ul>
+                <ul class="list-menu ">
+                    <li><a href="#">首页</a></li>
                     <li><a href="#">所有文档</a></li>
-                    <li><a href="#">HTML</a></li>
-                    <li><a href="#">JavaScript</a></li>
-                    <li><a href="#">CSS</a></li>
+                    <li><a ng-click="showSonMenu()">文档分类 <span class="caret" id="caret"></span></a>
+                        <ul class="son-list-menu " id="sonMenu">
+                            <li ng-repeat="i in menuList"><a href="#" ng-bind="i.name"></a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <!--<form action="#">-->
                 <!--<input type="text" placeholder="搜索">-->

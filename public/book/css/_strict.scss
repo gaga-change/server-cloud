@@ -1,23 +1,20 @@
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "my/class";
+@import "my/leftMenu";
+@import "my/pt";
 .m-left {
   @extend .row;
-  background-color: $btn-warning-bg;
+  //background-color: $btn-warning-bg;
+  //background: url("../img/bg.jpg") no-repeat;
+  background-size: cover;
   position: fixed;
   //transition: all 1s ease;
   overflow: hidden;
   @extend %transition;
   left: 15px;
-  .menu {
-    box-sizing: content-box;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    //overflow-x:
-    padding-right: 30px;
-  }
 }
+
 
 .m-right {
   height: 500px;
