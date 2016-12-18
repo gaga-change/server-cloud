@@ -51,7 +51,7 @@
                     <li><a ui-sref="all">所有文档</a></li>
                     <li class="my-class"><a ng-click="showSonMenu()">文档分类 <span class="caret" id="caret"></span></a>
                         <ul class="son-list-menu menu-move" ng-if="ifShowSonMenu" id="sonMenu">
-                            <li ng-repeat="i in menuList" ><a ui-sref="{{i.name}}" ng-bind="i.name"></a></li>
+                            <li ng-repeat="i in menuList" ><a ui-sref="{{i.id}}" ng-bind="i.name"></a></li>
                         </ul>
                     </li>
                 </ul>

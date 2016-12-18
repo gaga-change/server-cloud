@@ -19,24 +19,26 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         url: "/all",
         views: {
             content: {
-                templateUrl: "blog/component/list.html"
+                templateUrl: "blog/component/list.html",
+                controller: "ListCtrl"
             }
-        }
+        },
+        params: {id: "all"}
     });
     /*各种文档*/
     $.get("/data/type", function (data) {
        var data = data["list"];
        data.forEach(function (v, e) {
            $stateProvider.state({
-               name: v.name,
-               url: "/" + v.name,
+               name: v.id,
+               url: "/" + v.id,
                views: {
                    content: {
                        templateUrl: "blog/component/list.html",
                        controller: "ListCtrl"
                    }
                },
-               params: {name: v.name}
+               params: {id: v.id}
            });
        })
     });
@@ -70,7 +72,7 @@ app.controller("MainCtrl", ['$scope', "$http", function ($scope, $http) {
 
 app.controller("ListCtrl", ['$scope', '$http', "$stateParams", function ($scope, $http, $stateParams) {
     console.log($stateParams);
-    $scope.name = $stateParams.name;
+    $scope.name = $stateParams.id;
 }]);
 
 /*给“文档分类给具体的值”*/
