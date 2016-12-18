@@ -1,7 +1,33 @@
 /**
  * Created by dong on 2016/12/16.
  */
+var typeArr = ["1","2","3","4","5"];
+function G() {
+    this.type = [];
+    this.document = [];
+    this.web = function (str, callBack) {
+        var _self = this;
+        if (this[str].length > 0) {
+            setTimeout(function () {
+                callBack(_self[str])
+            }, 1)
+        } else {
+            $.get("/data/" + str, function (data) {
+                callBack(data['list']);
+                _self[str] = data['list'];
+            })
+        }
+    }
+}
+G.prototype.getType = function (callBack) {
+    this.web("type", callBack);
+};
+G.prototype.getDocument = function (callBack) {
+    this.web("document", callBack);
+};
+var g = new G();
 var app = angular.module('Blog', ["ngAnimate", "ui.router"]);
+
 app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
     /*首页*/
     $stateProvider.state({
@@ -26,31 +52,31 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         params: {id: "all"}
     });
     /*各种文档*/
-    $.get("/data/type", function (data) {
-       var data = data["list"];
-       data.forEach(function (v, e) {
-           $stateProvider.state({
-               name: v.id,
-               url: "/" + v.id,
-               views: {
-                   content: {
-                       templateUrl: "blog/component/list.html",
-                       controller: "ListCtrl"
-                   }
-               },
-               params: {id: v.id}
-           });
-       })
+    typeArr.forEach(function (v) {
+        $stateProvider.state({
+            name: v,
+            url: "/" + v,
+            views: {
+                content: {
+                    templateUrl: "blog/component/list.html",
+                    controller: "ListCtrl"
+                }
+            },
+            params: {id: v}
+        });
     });
     $urlRouterProvider.otherwise("index");
+
 }]);
+
 app.controller("MainCtrl", ['$scope', "$http", function ($scope, $http) {
     $scope.ifShowSonMenu = false;
     $scope.showMenu = showMenu;
     $scope.hideMenu = hideMenu;
     $scope.showSonMenu = showSonMenu;
-    $http({method: "get", url: "/data/type"}).success(function (data) {
-        $scope.menuList = data["list"];
+
+    g.getType(function (data) {
+        $scope.menuList = data;
     });
 
     /*点击显示子菜单*/
@@ -71,8 +97,22 @@ app.controller("MainCtrl", ['$scope', "$http", function ($scope, $http) {
 }]);
 
 app.controller("ListCtrl", ['$scope', '$http', "$stateParams", function ($scope, $http, $stateParams) {
-    console.log($stateParams);
-    $scope.name = $stateParams.id;
+    /*获取参数，判断需要显示的响应 文档列表*/
+    var typeId = $stateParams.id;
+    g.getDocument(function (data) {
+        console.log(data);
+        if (typeId == "all") {
+            $scope.list = data;
+        } else {
+            $scope.list = data.filter(function (v) {
+                console.log(v);
+                if (v["type_id"] == typeId) {
+                    return true;
+                }
+                return false;
+            })
+        }
+    })
 }]);
 
 /*给“文档分类给具体的值”*/
